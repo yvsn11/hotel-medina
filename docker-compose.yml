@@ -1,0 +1,59 @@
+# `docker compose up --build` works without a .env file; values below fall back to dev defaults.
+# Do not reuse these defaults in production.
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: medina
+      POSTGRES_PASSWORD: medina
+      POSTGRES_DB: medina
+    ports:
+      # Host access for `make test-db` / pytest and psql. Loopback only.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - medina_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medina -d medina"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # btree_gist is created by the first Alembic migration (needs the superuser role used here).
+      DATABASE_URL: postgresql+psycopg://medina:medina@db:5432/medina
+      JWT_SECRET: ${JWT_SECRET:-dev-only-change-me}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173}
+      HOLD_MINUTES: ${HOLD_MINUTES:-15}
+      TOURIST_TAX_PER_PERSON_NIGHT: ${TOURIST_TAX_PER_PERSON_NIGHT:-15.00}
+      PAYMENT_PROVIDER: ${PAYMENT_PROVIDER:-mock}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      PORT: "5000"
+    command:
+      - sh
+      - -c
+      - >-
+        flask --app wsgi db upgrade &&
+        flask --app wsgi seed &&
+        exec gunicorn --bind 0.0.0.0:5000 --workers 2 --access-logfile - wsgi:app
+    ports:
+      - "5000:5000"
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:5000}
+        VITE_STRIPE_PUBLISHABLE_KEY: ${VITE_STRIPE_PUBLISHABLE_KEY:-}
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
+
+volumes:
+  medina_pgdata:

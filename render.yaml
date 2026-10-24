@@ -1,0 +1,33 @@
+# Render Blueprint. Render redeploys the API automatically on every push to the
+# linked branch (main). The database is external (Neon), so DATABASE_URL is set by hand.
+services:
+  - type: web
+    name: hotel-medina-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    branch: main
+    healthCheckPath: /api/health
+    autoDeploy: true
+    # Runs before each new version goes live. Both commands are idempotent.
+    # Note: preDeployCommand may not be available on every Render plan; check Render's docs.
+    # If it is not, run the same two commands from a Render Shell instead.
+    preDeployCommand: flask --app wsgi db upgrade && flask --app wsgi seed
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
+      - key: PAYMENT_PROVIDER
+        value: mock
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: HOLD_MINUTES
+        value: "15"
+      - key: TOURIST_TAX_PER_PERSON_NIGHT
+        value: "15.00"

@@ -1,0 +1,129 @@
+{
+  "common": { "loading": "Loading...", "to": "to", "save": "Save", "dismiss": "Dismiss" },
+  "nav": {
+    "main": "Main navigation", "skip": "Skip to content", "search": "Rooms", "bookings": "My bookings",
+    "staff": "Staff", "login": "Log in", "register": "Create account", "logout": "Log out", "language": "Language"
+  },
+  "footer": { "address": "Derb el Medina, Fes el-Bali, Fes, Morocco", "demo": "Demo project. No real booking or payment is made." },
+  "hero": {
+    "title": "A quiet courtyard in the heart of the Fes medina",
+    "subtitle": "Seven rooms around a fountain, mint tea on the terrace, and the call to prayer over the rooftops. Pick your dates to see what is free."
+  },
+  "search": {
+    "title": "Find your room", "checkIn": "Check-in", "checkOut": "Check-out", "guests": "Guests",
+    "submit": "Search rooms", "searching": "Searching...",
+    "errors": {
+      "from_required": "Choose a check-in date.",
+      "to_required": "Choose a check-out date.",
+      "from_past": "Check-in cannot be in the past.",
+      "to_before_from": "Check-out must be after check-in.",
+      "too_long": "A stay can last 30 nights at most.",
+      "guests_range": "Enter between 1 and 6 guests."
+    }
+  },
+  "results": {
+    "title": "Available for your dates",
+    "intro": "Choose your dates above to see available rooms and prices.",
+    "emptyTitle": "No room available",
+    "emptyBody": "Every room that fits your party is taken on these dates. Try moving your stay by a day or two, shortening it, or checking fewer guests.",
+    "capacity_one": "Sleeps {{count}} guest",
+    "capacity_other": "Sleeps up to {{count}} guests",
+    "roomsLeft_one": "{{count}} room left",
+    "roomsLeft_other": "{{count}} rooms left",
+    "book": "Book",
+    "bookAria": "Book {{room}}"
+  },
+  "price": {
+    "nights": "Nights", "nightlyAvg": "Average per night", "subtotal": "Subtotal",
+    "discount": "Long-stay discount", "tax": "Tourist tax", "total": "Total"
+  },
+  "book": {
+    "title": "Review your booking",
+    "invalidSelection": "This booking link is incomplete or the dates are no longer valid.",
+    "unavailableNow": "This room type is no longer available for these dates.",
+    "changeDates": "Change dates",
+    "holdNotice": "We hold the room for you while you pay. Unpaid bookings are released when the timer runs out.",
+    "confirm": "Confirm and continue to payment",
+    "confirming": "Booking..."
+  },
+  "hold": {
+    "label": "Room held for you",
+    "expired": "Hold expired",
+    "expiredHelp": "The room was released because payment was not completed in time. Search again to book it.",
+    "backToSearch": "Back to search",
+    "minutesLeft_one": "{{count}} minute left to pay",
+    "minutesLeft_other": "{{count}} minutes left to pay"
+  },
+  "pay": {
+    "pageTitle": "Payment",
+    "title": "Pay for your stay",
+    "demoBadge": "Demo payment",
+    "demoHelp": "This is a demonstration. No card is charged and no real money moves.",
+    "demoButton": "Pay {{amount}} (demo)",
+    "button": "Pay {{amount}}",
+    "testHint": "Test mode. Use the card 4242 4242 4242 4242, any future expiry date and any CVC.",
+    "processing": "Processing...",
+    "confirming": "Payment received. Confirming your booking...",
+    "stillPending": "Your payment is being processed. Confirmation can take a few more seconds.",
+    "checkAgain": "Check again",
+    "confirmedTitle": "Booking confirmed",
+    "confirmedBody": "Thank you. Booking #{{id}} is confirmed. We look forward to welcoming you.",
+    "viewBookings": "View my bookings",
+    "statusExpired": "This booking expired before it was paid.",
+    "statusCancelled": "This booking was cancelled."
+  },
+  "bookings": {
+    "title": "My bookings",
+    "empty": "You have no bookings yet.",
+    "room": "Room {{number}}",
+    "nights_one": "{{count}} night", "nights_other": "{{count}} nights",
+    "guests_one": "{{count}} guest", "guests_other": "{{count}} guests",
+    "pay": "Pay now",
+    "cancel": "Cancel booking",
+    "cancelConfirm": "Cancel this booking? This cannot be undone.",
+    "cancelYes": "Yes, cancel it",
+    "cancelNo": "Keep it"
+  },
+  "status": {
+    "PENDING": "Awaiting payment", "CONFIRMED": "Confirmed", "CANCELLED": "Cancelled", "EXPIRED": "Expired",
+    "AVAILABLE": "Available", "MAINTENANCE": "Maintenance"
+  },
+  "auth": {
+    "loginTitle": "Log in", "registerTitle": "Create your account",
+    "loginRequired": "Log in to continue your booking. Your selection is kept.",
+    "email": "Email", "password": "Password", "fullName": "Full name",
+    "passwordHint": "At least 8 characters.",
+    "loginSubmit": "Log in", "registerSubmit": "Create account",
+    "noAccount": "No account yet?", "registerLink": "Create one",
+    "haveAccount": "Already registered?", "loginLink": "Log in",
+    "sessionExpired": "Your session has ended. Please log in again.",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address.",
+      "short": "Use at least 8 characters."
+    }
+  },
+  "staff": {
+    "title": "Rooms",
+    "room": "Room {{number}}",
+    "basePrice": "{{label}} base price (MAD per night)",
+    "priceInvalid": "Enter a positive amount with at most 2 decimals.",
+    "saved": "Saved. New base price: {{price}}.",
+    "setMaintenance": "Set to maintenance",
+    "setAvailable": "Set to available",
+    "setMaintenanceAria": "Set room {{number}} to maintenance",
+    "setAvailableAria": "Set room {{number}} to available"
+  },
+  "notFound": { "title": "Page not found", "body": "This page does not exist." },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "no_availability": "Sorry, the last room of this type was just taken for these dates. Change your dates to see what is still free.",
+    "invalid_state": "This action is no longer possible for this booking.",
+    "email_taken": "An account with this email already exists. Log in instead.",
+    "unauthorized": "Wrong email or password, or your session has ended.",
+    "forbidden": "You do not have access to this.",
+    "not_found": "We could not find this booking.",
+    "network_error": "Cannot reach the server. Check your connection and try again.",
+    "server_error": "The server had a problem. Please try again in a moment."
+  }
+}

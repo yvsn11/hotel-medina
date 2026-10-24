@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-sand-100 font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-zellige-800;
+    font-variation-settings: 'opsz' 72;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-terracotta-600;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .zellige-bg {
+    background-color: theme('colors.zellige.700');
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C9A24A' stroke-opacity='.28' stroke-width='1.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3C/g%3E%3Cg fill='%23C9A24A' fill-opacity='.22'%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='72' cy='0' r='3'/%3E%3Ccircle cx='0' cy='72' r='3'/%3E%3Ccircle cx='72' cy='72' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md px-5 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-terracotta-600 text-white hover:bg-terracotta-700;
+  }
+  .btn-secondary {
+    @apply btn border border-zellige-600 bg-transparent text-zellige-700 hover:bg-zellige-50;
+  }
+  .btn-danger {
+    @apply btn border border-red-700 bg-transparent text-red-800 hover:bg-red-50;
+  }
+  .field {
+    @apply mt-1 block min-h-[44px] w-full rounded-md border border-sand-400 bg-white px-3 py-2 text-ink shadow-sm focus:border-zellige-600;
+  }
+  .field-error {
+    @apply border-red-700;
+  }
+  .label {
+    @apply block text-sm font-semibold text-zellige-800;
+  }
+  .card {
+    @apply rounded-lg border border-sand-300 bg-sand-50 shadow-sm;
+  }
+}

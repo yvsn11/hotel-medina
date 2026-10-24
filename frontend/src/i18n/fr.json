@@ -1,0 +1,129 @@
+{
+  "common": { "loading": "Chargement...", "to": "au", "save": "Enregistrer", "dismiss": "Fermer" },
+  "nav": {
+    "main": "Navigation principale", "skip": "Aller au contenu", "search": "Chambres", "bookings": "Mes réservations",
+    "staff": "Personnel", "login": "Connexion", "register": "Créer un compte", "logout": "Déconnexion", "language": "Langue"
+  },
+  "footer": { "address": "Derb el Medina, Fès el-Bali, Fès, Maroc", "demo": "Projet de démonstration. Aucune réservation ni aucun paiement réel." },
+  "hero": {
+    "title": "Une cour paisible au cœur de la médina de Fès",
+    "subtitle": "Sept chambres autour d'une fontaine, le thé à la menthe sur la terrasse et l'appel à la prière au-dessus des toits. Choisissez vos dates pour voir ce qui est libre."
+  },
+  "search": {
+    "title": "Trouvez votre chambre", "checkIn": "Arrivée", "checkOut": "Départ", "guests": "Voyageurs",
+    "submit": "Rechercher", "searching": "Recherche...",
+    "errors": {
+      "from_required": "Choisissez une date d'arrivée.",
+      "to_required": "Choisissez une date de départ.",
+      "from_past": "La date d'arrivée ne peut pas être passée.",
+      "to_before_from": "Le départ doit être après l'arrivée.",
+      "too_long": "Un séjour dure 30 nuits au maximum.",
+      "guests_range": "Indiquez entre 1 et 6 voyageurs."
+    }
+  },
+  "results": {
+    "title": "Disponible pour vos dates",
+    "intro": "Choisissez vos dates ci-dessus pour voir les chambres disponibles et leurs prix.",
+    "emptyTitle": "Aucune chambre disponible",
+    "emptyBody": "Toutes les chambres adaptées à votre groupe sont prises à ces dates. Essayez de décaler votre séjour d'un jour ou deux, de le raccourcir, ou de réduire le nombre de voyageurs.",
+    "capacity_one": "Pour {{count}} voyageur",
+    "capacity_other": "Jusqu'à {{count}} voyageurs",
+    "roomsLeft_one": "{{count}} chambre restante",
+    "roomsLeft_other": "{{count}} chambres restantes",
+    "book": "Réserver",
+    "bookAria": "Réserver {{room}}"
+  },
+  "price": {
+    "nights": "Nuits", "nightlyAvg": "Moyenne par nuit", "subtotal": "Sous-total",
+    "discount": "Remise long séjour", "tax": "Taxe de séjour", "total": "Total"
+  },
+  "book": {
+    "title": "Vérifiez votre réservation",
+    "invalidSelection": "Ce lien de réservation est incomplet ou les dates ne sont plus valides.",
+    "unavailableNow": "Ce type de chambre n'est plus disponible à ces dates.",
+    "changeDates": "Modifier les dates",
+    "holdNotice": "Nous gardons la chambre pour vous pendant le paiement. Les réservations non payées sont libérées à la fin du compte à rebours.",
+    "confirm": "Confirmer et passer au paiement",
+    "confirming": "Réservation..."
+  },
+  "hold": {
+    "label": "Chambre réservée pour vous",
+    "expired": "Réservation expirée",
+    "expiredHelp": "La chambre a été libérée car le paiement n'a pas été effectué à temps. Relancez une recherche pour la réserver.",
+    "backToSearch": "Retour à la recherche",
+    "minutesLeft_one": "{{count}} minute restante pour payer",
+    "minutesLeft_other": "{{count}} minutes restantes pour payer"
+  },
+  "pay": {
+    "pageTitle": "Paiement",
+    "title": "Payer votre séjour",
+    "demoBadge": "Paiement de démonstration",
+    "demoHelp": "Ceci est une démonstration. Aucune carte n'est débitée et aucun argent réel n'est échangé.",
+    "demoButton": "Payer {{amount}} (démo)",
+    "button": "Payer {{amount}}",
+    "testHint": "Mode test. Utilisez la carte 4242 4242 4242 4242, une date d'expiration future et un CVC quelconque.",
+    "processing": "Traitement...",
+    "confirming": "Paiement reçu. Confirmation de votre réservation...",
+    "stillPending": "Votre paiement est en cours de traitement. La confirmation peut prendre encore quelques secondes.",
+    "checkAgain": "Vérifier à nouveau",
+    "confirmedTitle": "Réservation confirmée",
+    "confirmedBody": "Merci. La réservation n°{{id}} est confirmée. Nous avons hâte de vous accueillir.",
+    "viewBookings": "Voir mes réservations",
+    "statusExpired": "Cette réservation a expiré avant d'être payée.",
+    "statusCancelled": "Cette réservation a été annulée."
+  },
+  "bookings": {
+    "title": "Mes réservations",
+    "empty": "Vous n'avez pas encore de réservation.",
+    "room": "Chambre {{number}}",
+    "nights_one": "{{count}} nuit", "nights_other": "{{count}} nuits",
+    "guests_one": "{{count}} voyageur", "guests_other": "{{count}} voyageurs",
+    "pay": "Payer maintenant",
+    "cancel": "Annuler la réservation",
+    "cancelConfirm": "Annuler cette réservation ? Cette action est définitive.",
+    "cancelYes": "Oui, annuler",
+    "cancelNo": "La conserver"
+  },
+  "status": {
+    "PENDING": "En attente de paiement", "CONFIRMED": "Confirmée", "CANCELLED": "Annulée", "EXPIRED": "Expirée",
+    "AVAILABLE": "Disponible", "MAINTENANCE": "En maintenance"
+  },
+  "auth": {
+    "loginTitle": "Connexion", "registerTitle": "Créez votre compte",
+    "loginRequired": "Connectez-vous pour poursuivre votre réservation. Votre sélection est conservée.",
+    "email": "E-mail", "password": "Mot de passe", "fullName": "Nom complet",
+    "passwordHint": "8 caractères minimum.",
+    "loginSubmit": "Se connecter", "registerSubmit": "Créer le compte",
+    "noAccount": "Pas encore de compte ?", "registerLink": "En créer un",
+    "haveAccount": "Déjà inscrit ?", "loginLink": "Se connecter",
+    "sessionExpired": "Votre session est terminée. Veuillez vous reconnecter.",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez une adresse e-mail valide.",
+      "short": "Utilisez au moins 8 caractères."
+    }
+  },
+  "staff": {
+    "title": "Chambres",
+    "room": "Chambre {{number}}",
+    "basePrice": "Prix de base {{label}} (MAD par nuit)",
+    "priceInvalid": "Saisissez un montant positif avec 2 décimales au plus.",
+    "saved": "Enregistré. Nouveau prix de base : {{price}}.",
+    "setMaintenance": "Mettre en maintenance",
+    "setAvailable": "Rendre disponible",
+    "setMaintenanceAria": "Mettre la chambre {{number}} en maintenance",
+    "setAvailableAria": "Rendre la chambre {{number}} disponible"
+  },
+  "notFound": { "title": "Page introuvable", "body": "Cette page n'existe pas." },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "no_availability": "Désolé, la dernière chambre de ce type vient d'être prise à ces dates. Modifiez vos dates pour voir ce qui reste libre.",
+    "invalid_state": "Cette action n'est plus possible pour cette réservation.",
+    "email_taken": "Un compte existe déjà avec cet e-mail. Connectez-vous plutôt.",
+    "unauthorized": "E-mail ou mot de passe incorrect, ou session terminée.",
+    "forbidden": "Vous n'avez pas accès à cette page.",
+    "not_found": "Réservation introuvable.",
+    "network_error": "Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.",
+    "server_error": "Le serveur a rencontré un problème. Réessayez dans un instant."
+  }
+}
