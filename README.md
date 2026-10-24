@@ -1,7 +1,6 @@
 # Hotel Medina
 
-<!-- Replace <your-username> with your GitHub username (badge and clone URL). -->
-![CI](https://github.com/<your-username>/hotel-medina/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/yvsn11/hotel-medina/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.11+-3776AB)
 ![React](https://img.shields.io/badge/react-18-61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-15-336791)
@@ -187,7 +186,7 @@ Short write-ups explaining the trade-offs live in [`docs/adr/`](docs/adr/):
 Requirements: Docker and Docker Compose. For work outside Docker you also need Python 3.12 (3.11+ is supported) and Node 22.
 
 ```bash
-git clone https://github.com/<your-username>/hotel-medina.git
+git clone https://github.com/yvsn11/hotel-medina.git
 cd hotel-medina
 cp .env.example .env      # optional: compose has working defaults
 docker compose up --build
