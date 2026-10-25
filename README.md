@@ -7,19 +7,12 @@
 
 **A booking engine that cannot be double-booked.** Online reservation platform for a riad-style hotel in Fès, Morocco, built around the hard parts of booking systems: concurrency-safe availability, time-limited holds, idempotent requests and a webhook-driven payment flow.
 
-<!-- Replace both placeholder URLs below once the app is deployed (see docs/deployment.md). -->
-**Live demo:** https://<your-app>.vercel.app
-**API docs (OpenAPI):** https://<your-api>.onrender.com/api/docs
-
-> Free hosting: the first request may be slow while the API wakes up (up to about 30 seconds on some free tiers).
 > Payments run in **test mode only**. With Stripe configured, use card `4242 4242 4242 4242`, any future date, any CVC. Without Stripe keys the app uses a mock payment provider that goes through the same confirmation code.
 
 | Demo account | Email | Password |
 |---|---|---|
 | Guest | guest@demo.test | `demo1234` |
 | Staff | staff@demo.test | `demo1234` |
-
-<!-- Add a screenshot or GIF of the booking flow at docs/media/booking-flow.gif, then embed it here with: ![Booking flow](docs/media/booking-flow.gif) -->
 
 ## Table of contents
 
